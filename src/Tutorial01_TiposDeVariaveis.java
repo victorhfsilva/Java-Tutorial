@@ -15,24 +15,27 @@ public class Tutorial01_TiposDeVariaveis {
 	
 	//Variáveis de Classe
 	//Possuem um único valor por classe
+	//São declaradas como static
 	public static double rand1 = Math.random(); 
 	//Variáveis Finais não podem ser editadas
-	public static final double RAND2 = Math.random(); //Convenciona-se usar letras maiúsculas para finals
-	//Variáveis Privadas só podem ser acessadas através de getters e setters ou de dentro da classe
+	public static final double RAND2 = Math.random(); //Convenciona-se usar letras maiúsculas para variáveis finais
+	//Variáveis Privadas só podem ser acessadas através de getters e setters ou dentro da classe em que foram criadas
 	private static double rand3 = Math.random();
 	
+	//Rand3 Getter
 	public static double getRand3() {
 		return rand3;
 	}
-	
+	//Rand3 Setter
 	public static void setRand3(double rand3) {
 		Tutorial01_TiposDeVariaveis.rand3 = rand3;
 	}
-
+	//Método lerString
 	public String lerString() {
 		Scanner sc1 = new Scanner(System.in);
 		//Variável Local (São destruídas ao fim do método) 
 		//São declaradas dentro de métodos, construtores ou blocos
+		//Esta variável é na verdade um objeto do tipo String
 		String str1 = sc1.nextLine();
 		return str1;
 	}
